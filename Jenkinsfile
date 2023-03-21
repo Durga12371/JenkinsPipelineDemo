@@ -1,12 +1,20 @@
 pipeline {
     agent any
-    tools{
-        maven 'MAVEN'
-    }
+    
     stages {
-        stage('build') {
+        stage('Hello') {
             steps {
-                sh 'mvn --version'
+                echo 'Hello World'
+            }
+        }
+          stage('Build') {
+            steps {
+                echo 'Building'
+            }
+        }
+          stage('Deploy') {
+            steps {
+                echo 'Deploying'
             }
         }
     }
